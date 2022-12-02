@@ -7,7 +7,7 @@
 .netd-button {
     --color: var(--fg-color, rgb(221, 246, 255));
     --backgroundColor: var(--bg-color, rgb(0, 145, 255));
-    --transition-duration: var(--t-time, .4s);
+    --transition-duration: var(--t-time, .3s);
     --fontFamily: var(--font-family, inherit);
     --fontSize: var(--font-size, inherit);
     --fontWeight: var(--font-weight, inherit);
