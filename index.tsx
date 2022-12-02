@@ -10,6 +10,7 @@ type ButtonProps = {
     dfg?: string, // disabled foreground color
     dbg?: string, // disabled background color
     padding?: string,
+    margin?: string,
     fontSize?: string,
     fontFamily?: string,
     fontWeight?: string,
@@ -30,10 +31,11 @@ export const OnlineButton = forwardRef<HTMLButtonElement, ButtonProps>((props, r
     const isEnabled = useOnline();
 
     const appendedStyle = {
-        [props.padding ? "--padding" : ""] : props.padding,
-        [props.fontSize ? "--font-size" : ""] : props.fontSize,
-        [props.fontFamily ? "--font-family" : ""] : props.fontFamily,
-        [props.fontWeight ? "--font-weight" : ""] : props.fontWeight,
+        [props.padding ? "--padding" : ""]: props.padding,
+        [props.margin ? "--margin" : ""]: props.margin,
+        [props.fontSize ? "--font-size" : ""]: props.fontSize,
+        [props.fontFamily ? "--font-family" : ""]: props.fontFamily,
+        [props.fontWeight ? "--font-weight" : ""]: props.fontWeight,
         [props.fg ? "--fg-color" : ""]: props.fg,
         [props.bg ? "--bg-color" : ""]: props.bg,
         [props.dfg ? "--disabled-fg-color" : ""]: props.dfg,

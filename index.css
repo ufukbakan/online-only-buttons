@@ -1,6 +1,7 @@
 .netd-button-wrapper {
     display: inline-block;
     position: relative;
+    margin: var(--margin, initial);
 }
 
 .netd-button {
