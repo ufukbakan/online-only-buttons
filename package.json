@@ -22,8 +22,8 @@
     "ufuk",
     "ufukbakan"
   ],
-  "repository": "",
-  "homepage": "",
+  "repository": "https://github.com/ufukbakan/online-only-buttons",
+  "homepage": "https://github.com/ufukbakan/online-only-buttons#readme",
   "author": "Ufuk Bakan",
   "license": "MIT",
   "dependencies": {
