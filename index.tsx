@@ -1,6 +1,22 @@
-import React, { forwardRef } from "react";
-import { useOnline } from '@saulpalv/useonline'
-import "./index.css"
+import React, { forwardRef, MouseEventHandler, useEffect, useState } from "react";
+import "./index.css";
+
+const useOnline = () => {
+    const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+    useEffect(() => {
+        const onOnline = () => setIsOnline(true);
+        const onOffline = () => setIsOnline(false);
+        window.addEventListener('online', onOnline);
+        window.addEventListener('offline', onOffline);
+        return () => {
+            window.removeEventListener('online', onOnline);
+            window.removeEventListener('offline', onOffline);
+        }
+    }, []);
+
+    return isOnline;
+}
 
 type ButtonProps = {
     bg?: string, // background color
@@ -23,12 +39,16 @@ type ButtonProps = {
     transitionFunction?: string,
     offlineAnimation?: boolean,
     offlineMessage?: string, // message will be displayed when offline
+    onClick?: MouseEventHandler<HTMLButtonElement>,
     children: string | JSX.Element | JSX.Element[]
 }
 
 
 export const OnlineButton = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
     const isEnabled = useOnline();
+    const handlers = {
+        onClick: props.onClick
+    }
 
     const appendedStyle = {
         [props.padding ? "--padding" : ""]: props.padding,
@@ -64,6 +84,7 @@ export const OnlineButton = forwardRef<HTMLButtonElement, ButtonProps>((props, r
             <button
                 disabled={!isEnabled}
                 ref={ref}
+                {...handlers}
                 className={`netd-button ${isEnabled ? "online" : "offline"}`}>
                 {isEnabled ? props.children : props.offlineMessage || "Disconnected"}
             </button>

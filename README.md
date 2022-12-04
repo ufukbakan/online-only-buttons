@@ -44,7 +44,8 @@ function CustomButton({children}){
                 fontSize="12pt"
                 fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI'"
                 offlineAnimation={false}
-                offlineMessage="No connection">
+                offlineMessage="No connection"
+                onClick={ () => window.alert("Hello World!") }>
                 {props.children}
             </OnlineButton>
     )
@@ -82,4 +83,5 @@ All properties are optional except children.
 - <span style="font-size:1.4em;">**transitionFunction**</span> : type=***string***,
 - <span style="font-size:1.4em;">**offlineAnimation**</span> : type=***boolean***,
 - <span style="font-size:1.4em;">**offlineMessage**</span> : type=***string***, explication=***message will be displayed when offline***
+- <span style="font-size:1.4em;">**onClick**</span> : type=***MouseEventHandler***
 - <span style="font-size:1.4em;">**children**</span> : type=***string | JSX.Element | JSX.Element[]***, explication=***Child element/s written between component tag***
