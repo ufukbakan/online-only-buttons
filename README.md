@@ -2,7 +2,7 @@
 
 Only when the client is online clickable React buttons. Usable for forms and highly customizable.
 
-<video src="./example/capture.mp4" autoplay loop muted="true"></video>
+![](example/capture.gif)
 
 ## Simple Usage
 ```js
