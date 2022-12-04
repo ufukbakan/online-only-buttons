@@ -2,7 +2,7 @@
 
 Only when the client is online clickable React buttons. Usable for forms and highly customizable.
 
-![](example/capture.gif)
+![](https://raw.githubusercontent.com/ufukbakan/online-only-buttons/main/example/capture.gif)
 
 ## Simple Usage
 ```js

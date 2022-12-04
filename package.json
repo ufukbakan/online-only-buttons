@@ -1,6 +1,6 @@
 {
   "name": "online-only-buttons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Highly customizable network status dependent React button components.",
   "main": "index.tsx",
   "keywords": [
