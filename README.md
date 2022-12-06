@@ -46,7 +46,7 @@ function CustomButton({children}){
                 offlineAnimation={false}
                 offlineMessage="No connection"
                 onClick={ () => window.alert("Hello World!") }>
-                {props.children}
+                {children}
             </OnlineButton>
     )
 }
