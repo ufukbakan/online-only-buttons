@@ -3,6 +3,12 @@
   "version": "2.0.1",
   "description": "Highly customizable network status dependent React button components.",
   "main": "index.tsx",
+  "scripts": {
+    "precommit": "npm run test:badges && git add README.md",
+    "test": "nyc mocha \"./**/*test.[jt]s?(x)\"",
+    "test:badges": "nyc mocha \"./**/*test.[jt]s?(x)\" && istanbul-badges-readme",
+    "badges": "istanbul-badges-readme"
+  },
   "keywords": [
     "online",
     "only",
@@ -28,5 +34,20 @@
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/sinon": "^10.0.13",
+    "chai": "^4.3.7",
+    "global-jsdom": "^8.6.0",
+    "ignore-styles": "^5.0.1",
+    "istanbul-badges-readme": "^1.8.4",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.1",
+    "ts-node": "^10.9.1"
   }
 }

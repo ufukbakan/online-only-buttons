@@ -1,4 +1,10 @@
-<h1 align="center">online-only-buttons</h1>
+<h1 align="center">online-only-buttons
+<br>
+</h1>
+<span style="text-align: center">
+
+![Statements](https://img.shields.io/badge/statements-90%25-brightgreen.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-87.5%25-yellow.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-66.66%25-red.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat)
+</span>
 
 Only when the client is online clickable React buttons. Usable for forms and highly customizable.
 

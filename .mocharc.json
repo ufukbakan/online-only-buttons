@@ -1,0 +1,8 @@
+{
+    "loader": "ts-node/esm",
+    "require": [
+        "@babel/register",
+        "global-jsdom/register",
+        "ignore-styles"
+    ]
+}
