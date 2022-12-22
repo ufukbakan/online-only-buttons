@@ -5,8 +5,8 @@
   "main": "index.tsx",
   "scripts": {
     "precommit": "npm run test:badges && git add README.md",
-    "test": "nyc mocha \"./**/*test.[jt]s?(x)\"",
-    "test:badges": "nyc mocha \"./**/*test.[jt]s?(x)\" && istanbul-badges-readme",
+    "test": "nyc mocha ./**/*.test.[jt]s?(x)",
+    "test:badges": "npm run test && istanbul-badges-readme",
     "badges": "istanbul-badges-readme"
   },
   "keywords": [
@@ -36,8 +36,7 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.20.2",
-    "@babel/register": "^7.18.9",
+    "@testing-library/react": "^13.4.0",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
     "@types/sinon": "^10.0.13",

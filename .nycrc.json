@@ -1,6 +1,11 @@
 {
     "reporter": [
+        "text",
         "html",
         "json-summary"
+    ],
+    "exclude":[
+        "**/*.test.[jt]s?(x)",
+        "mocha.cjs"
     ]
 }
